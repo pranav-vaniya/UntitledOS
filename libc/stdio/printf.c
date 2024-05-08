@@ -103,7 +103,7 @@ int *printf_number(int *argp, int length, bool sign, int radix)
 		break;
 	}
 
-	char str[2], numstr[20];
+	char str[2];
 
 	// convert number to ASCII
 	do

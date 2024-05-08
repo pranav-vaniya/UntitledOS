@@ -4,21 +4,21 @@
 set -e
 
 # Clean up
-echo "├─── Cleaning Up ───\n"
-./clean.sh
+echo -e "├─── Cleaning Up ───\n"
+scripts/clean.sh
 
 # Create Headers
 echo -e "\n├─── Creating Headers ───\n"
-./headers.sh
+scripts/headers.sh
 
 # Build the iso
 echo -e "\n├─── Compiling Kernel ───\n"
-./build.sh
+scripts/build.sh
 
 # Start qemu
 echo -e "\n├─── Starting QEMU ───\n"
-./qemu.sh
+scripts/qemu.sh
 
 # Clean up again
 echo -e "\n├─── Cleaning Up ───\n"
-./clean.sh
+scripts/clean.sh
