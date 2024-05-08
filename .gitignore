@@ -1,0 +1,7 @@
+.vscode/
+*.iso
+isodir
+sysroot
+.vscode
+trial.c
+a.out
