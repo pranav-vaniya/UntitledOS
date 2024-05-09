@@ -38,6 +38,10 @@ string/memcpy.o \
 string/memmove.o \
 string/memset.o \
 string/strlen.o \
+process/details.o \
+scheduler/FCFS.o \
+scheduler/RR.o \
+random/randInt.o \
 
 HOSTEDOBJS=\
 $(ARCH_HOSTEDOBJS) \

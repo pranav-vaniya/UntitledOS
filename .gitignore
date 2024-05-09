@@ -3,5 +3,4 @@
 isodir
 sysroot
 .vscode
-trial.c
-a.out
+playground.py
