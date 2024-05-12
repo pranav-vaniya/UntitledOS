@@ -5,7 +5,10 @@
 int time_ndf = 0;
 
 /**
- * Nearest Deadline First
+ * @brief Nearest Deadline First Scheduler
+ * 
+ * @param process[] A list of processes
+ * @param total Total number of processes in the list
  */
 void NDF(struct Process process[], int total)
 {

@@ -4,7 +4,10 @@
 int time_fcfs = 0;
 
 /**
- * First Come First Serve
+ * @brief First Come First Serve Scheduler
+ * 
+ * @param process[] A list of processes
+ * @param total Total number of processes in the list
 */
 void FCFS(struct Process process[], int total)
 {

@@ -1,5 +1,12 @@
 #include <stdio.h>
 
+/**
+ * @brief Generate an array of indexes representing elements of a sorted list
+ * 
+ * @param arr An Integer array
+ * @param sorted_index An array to store the generated array
+ * @param size The size of the array
+*/
 void genSortedIndexes(int arr[], int sorted_index[], int size)
 {
     int i, j, min_idx, temp;

@@ -2,6 +2,7 @@
 #include <process.h>
 #include <scheduler.h>
 #include <random.h>
+#include <utils.h>
 
 #include <kernel/tty.h>
 
@@ -31,7 +32,7 @@ void kernel_main(void)
 	// RR(process, process_count, 4);
 	// HPF(process, process_count);
 	NDF(process, process_count);
-	
+
 	for (int i = 0; i < process_count; i++)
 	{
 		details(process[i]);

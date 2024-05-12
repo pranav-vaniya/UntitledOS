@@ -5,7 +5,10 @@
 int time_hpf = 0;
 
 /**
- * Highest Priority First
+ * @brief Highest Priority First Scheduler
+ * 
+ * @param process[] A list of processes
+ * @param total Total number of processes in the list
 */
 void HPF(struct Process process[], int total)
 {

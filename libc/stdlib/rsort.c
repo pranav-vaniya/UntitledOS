@@ -1,5 +1,11 @@
 #include <stdio.h>
 
+/**
+ * @brief Sort an Integer array in descending order (in-place)
+ * 
+ * @param arr An array of integers
+ * @param size Size of the array
+*/
 void rsort(int arr[], int size)
 {
     for (int i = 0; i < size - 1; i++)

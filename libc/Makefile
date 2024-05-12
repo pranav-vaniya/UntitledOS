@@ -47,6 +47,7 @@ scheduler/RR.o \
 scheduler/HPF.o \
 scheduler/NDF.o \
 random/randInt.o \
+utils/sleep.o \
 
 HOSTEDOBJS=\
 $(ARCH_HOSTEDOBJS) \

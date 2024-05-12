@@ -8,5 +8,8 @@ headers: clean
 build: clean headers
 	scripts/build.sh
 
+todo:
+	scripts/todo.sh
+
 clean:
 	scripts/clean.sh

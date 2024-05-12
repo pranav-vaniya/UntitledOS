@@ -3,9 +3,6 @@
 
 int time_rr = 0;
 
-/**
- * Round Robin
-*/
 struct Process updateProcess(struct Process process, int time_slice)
 {
     for (int j = 0; j < time_slice; j++)
@@ -23,6 +20,12 @@ struct Process updateProcess(struct Process process, int time_slice)
     return process;
 }
 
+/**
+ * @brief Round Robin Scheduler
+ * 
+ * @param process[] A list of processes
+ * @param total Total number of processes in the list
+*/
 void RR(struct Process process[], int total, int time_slice)
 {
     int completed = 0;
