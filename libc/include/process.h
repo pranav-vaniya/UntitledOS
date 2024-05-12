@@ -8,14 +8,15 @@ extern "C" {
 #endif
 
 /**
- * id, priority, status, progress, startTime, endTime
+ * id, priority, status, burstTime, startTime, endTime
 */
 struct Process
 {
     int id;
     int priority;
     int status;
-    int progress;
+    int deadline;
+    int burstTime;
     int startTime;
     int endTime;
 };

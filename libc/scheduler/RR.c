@@ -3,14 +3,17 @@
 
 int time_rr = 0;
 
+/**
+ * Round Robin
+*/
 struct Process updateProcess(struct Process process, int time_slice)
 {
     for (int j = 0; j < time_slice; j++)
     {
-        process.progress += 1;
+        process.burstTime -= 1;
         time_rr++;
 
-        if (process.progress == 100)
+        if (process.burstTime <= 0)
         {
             process.endTime = time_rr;
             break;
@@ -33,13 +36,14 @@ void RR(struct Process process[], int total, int time_slice)
                 process[i].startTime = time_rr;
             }
 
-            if (process[i].progress < 100)
+            if (process[i].burstTime > 0)
             {
                 process[i] = updateProcess(process[i], time_slice);
 
-                if (process[i].progress == 100)
+                if (process[i].burstTime == 0)
                 {
                     completed++;
+                    process[i].status = 1;
                 }
             }
         }

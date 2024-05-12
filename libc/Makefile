@@ -33,6 +33,9 @@ stdio/printf.o \
 stdio/putchar.o \
 stdio/puts.o \
 stdlib/abort.o \
+stdlib/sort.o \
+stdlib/rsort.o \
+stdlib/genSortedIndexes.o \
 string/memcmp.o \
 string/memcpy.o \
 string/memmove.o \
@@ -41,6 +44,8 @@ string/strlen.o \
 process/details.o \
 scheduler/FCFS.o \
 scheduler/RR.o \
+scheduler/HPF.o \
+scheduler/NDF.o \
 random/randInt.o \
 
 HOSTEDOBJS=\

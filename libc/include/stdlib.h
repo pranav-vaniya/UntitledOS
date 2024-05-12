@@ -10,6 +10,10 @@ extern "C" {
 __attribute__((__noreturn__))
 void abort(void);
 
+void sort(int arr[], int size);
+void rsort(int arr[], int size);
+void genSortedIndexes(int arr[], int sorted_index[], int size);
+
 #ifdef __cplusplus
 }
 #endif

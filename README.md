@@ -4,9 +4,9 @@ VOS is an operating system written from scratch in C, and is still in progress.
 
 <br>
 
-To have a look at the system, simply execute the run script in the parent directory:
+To have a look at the system, simply execute the make in the parent directory:
 ```
-./run.sh
+make
 ```
 
 <br>
