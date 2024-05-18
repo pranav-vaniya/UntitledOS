@@ -1,6 +1,3 @@
 .vscode/
-*.iso
-isodir
-sysroot
-.vscode
-playground.py
+build/
+UntitledOS.iso
