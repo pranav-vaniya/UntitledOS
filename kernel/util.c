@@ -1,4 +1,5 @@
 #include "include/util.h"
+#include "include/stdint.h"
 
 void memset(void *dest, char val, uint32 count)
 {
@@ -8,4 +9,9 @@ void memset(void *dest, char val, uint32 count)
     {
         *temp++ = val;
     }
+}
+
+void outPortB(uint16 port, uint8 value)
+{
+    asm volatile("outb %1, %0" : : "dN"(port), "a"(value));
 }
