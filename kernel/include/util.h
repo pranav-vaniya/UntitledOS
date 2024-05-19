@@ -2,6 +2,7 @@
 
 void memset(void *dest, char val, uint32 count);
 void outPortB(uint16 port, uint8 value);
+char inPortB(uint16 port);
 
 struct InterruptRegisters
 {

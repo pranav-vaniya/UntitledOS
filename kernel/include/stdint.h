@@ -11,3 +11,8 @@ typedef unsigned long int uint32;
 
 typedef signed long long int int64;
 typedef unsigned long long int uint64;
+
+typedef uint8 bool;
+
+#define true 1
+#define false 0

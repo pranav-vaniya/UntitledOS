@@ -10,8 +10,7 @@ const uint32 freq = 100;
 void onIrq0(struct InterruptRegisters *regs)
 {
     ticks++;
-
-    print("a ");
+    // print("a ");
 }
 
 void initTimer()
