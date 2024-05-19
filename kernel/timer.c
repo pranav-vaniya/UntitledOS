@@ -3,6 +3,7 @@
 #include "include/idt.h"
 #include "include/vga.h"
 #include "include/timer.h"
+#include "include/stdio.h"
 
 uint64 ticks;
 const uint32 freq = 100;

@@ -3,6 +3,8 @@
 #include "include/idt.h"
 #include "include/timer.h"
 #include "include/keyboard.h"
+#include "include/stdio.h"
+#include "include/stdint.h"
 
 void kernelMain()
 {
@@ -11,7 +13,10 @@ void kernelMain()
     initTimer();
     initKeyboard();
 
-    ResetVGA();
+    int num = 45564;
+    printf("Hello, World %d!\n", num);
+
+    putc('z');
 
     for (;;)
         ;

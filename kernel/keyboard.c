@@ -1,6 +1,6 @@
 #include "include/stdint.h"
 #include "include/util.h"
-#include "include/vga.h"
+#include "include/stdio.h"
 #include "include/idt.h"
 #include "include/keyboard.h"
 
