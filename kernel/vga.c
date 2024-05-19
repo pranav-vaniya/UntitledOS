@@ -91,3 +91,75 @@ void print(const char *s)
         s++;
     }
 }
+
+void printd(int num)
+{
+    int pos = 0, rem = 0;
+    char str[16];
+
+    while (num > 0)
+    {
+        switch (num % 10)
+        {
+        case 0:
+            str[pos] = '0';
+            break;
+
+        case 1:
+            str[pos] = '1';
+            break;
+
+        case 2:
+            str[pos] = '2';
+            break;
+
+        case 3:
+            str[pos] = '3';
+            break;
+
+        case 4:
+            str[pos] = '4';
+            break;
+
+        case 5:
+            str[pos] = '5';
+            break;
+
+        case 6:
+            str[pos] = '6';
+            break;
+
+        case 7:
+            str[pos] = '7';
+            break;
+
+        case 8:
+            str[pos] = '8';
+            break;
+
+        case 9:
+            str[pos] = '9';
+            break;
+
+        default:
+            break;
+        }
+
+        num = num / 10;
+        pos++;
+    }
+
+    str[pos] = '\0';
+
+    while (pos >= 0)
+    {
+        putc(str[pos]);
+        pos--;
+    }
+}
+
+void putc(char c)
+{
+    char str[] = {c, '\0'};
+    print(str);
+}

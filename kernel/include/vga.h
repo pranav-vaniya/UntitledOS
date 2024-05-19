@@ -12,3 +12,5 @@ void print(const char *s);
 void scrollUp();
 void newLine();
 void ResetVGA();
+void printd(int num);
+void putc(char c);

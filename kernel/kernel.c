@@ -9,9 +9,6 @@ void kernelMain()
 
     ResetVGA();
 
-    print("Added IDT\n");
-
-    int a = 1/0;
-
-    print("System did not print this. Did it?.");
+    int a = 556;
+    printd(a);
 }
