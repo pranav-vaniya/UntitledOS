@@ -1,14 +1,31 @@
 # Untitled OS
 
-Untitled OS is an x86_64 operating system written from scratch in C, and is still in progress.
+Untitled OS is an x86_64 operating system written from scratch in C. This project is still in progress and is intended for educational purposes.
 
-<br>
+## A Brief Overview
 
-To have a look at the system, simply execute the make in the parent directory:
+Untitled OS started as a passion project and remains a work in progress. It is designed for learning and experimentation rather than practical use, as it is far from complete or stable.
+
+## Compiling the Source
+
+To compile the source code, execute the `make` command in the parent directory:
 ```
 make
 ```
+This will generate an ISO file and start QEMU. You may need to update the compiler path and other settings in the Makefile to suit your environment.
 
-<br>
+## Acknowledgements
 
-Before, executing the make command, make sure you have `gcc`, `mtools` and `grub` available on your system. The make command will try to launch the generated iso on `QEMU`, but you can use any virtual machine manager for it.
+I would like to extend my heartfelt gratitude to the following content creators and websites for their invaluable resources and inspiration:
+
+- [OliveStem](https://youtube.com/@olivestemlearning)
+- [nanobyte](https://youtube.com/@nanobyte-dev)
+- [Write your own Operating System](https://youtube.com/@writeyourownoperatingsystem)
+- [OSDev](https://wiki.osdev.org/Expanded_Main_Page)
+- And many more ...
+
+The code has been highly inspired from the above mentioned mediums and i am greatly indebted to them.
+
+## Thanks
+
+Thank you for checking out Untitled OS. Happy coding!
