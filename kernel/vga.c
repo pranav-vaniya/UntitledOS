@@ -6,6 +6,20 @@ uint16 *const vga = (uint16 *const)0xC00B8000;
 const uint16 defaultColor = (COLOR_LIGHT_GREY << 8) | (COLOR_BLACK << 12);
 uint16 currentColor = defaultColor;
 
+void outb(uint16 port, uint8 val) {
+    asm volatile ("outb %0, %1" : : "a"(val), "Nd"(port));
+}
+
+void move_cursor(int row, int col) {
+    uint16 pos = row * 80 + col;
+
+    outb(0x3D4, 14);
+    outb(0x3D5, (pos >> 8) & 0xFF);
+
+    outb(0x3D4, 15);
+    outb(0x3D5, pos & 0xFF);
+}
+
 void ResetVGA()
 {
     line = 0;
@@ -104,4 +118,6 @@ void print(const char *s)
 
         s++;
     }
+
+    move_cursor(line, column);
 }

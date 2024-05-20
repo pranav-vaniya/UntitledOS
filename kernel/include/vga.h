@@ -1,5 +1,7 @@
 #pragma once
 
+#include "stdint.h"
+
 #define COLOR_BLACK 0
 #define COLOR_BLUE 1
 #define COLOR_GREEN 2
@@ -20,7 +22,11 @@
 #define width 80
 #define height 25
 
-void print(const char* s);
+extern void movecursor();
+
+void print(const char *s);
 void scrollUp();
 void newLine();
 void Reset();
+void outb(uint16 port, uint8 val);
+void move_cursor(int row, int col);

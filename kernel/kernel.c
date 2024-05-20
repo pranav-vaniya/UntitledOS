@@ -21,7 +21,7 @@ void kernelMain(uint32 magic, struct multiboot_info *bootInfo)
     initMemory(bootInfo->mem_upper * 1024, physicalAllocStart);
     initKmalloc(0x1000);
 
-    printf("kmalloc done.");
+    printf("The cursor now blinks here ->");
 
     for (;;)
         ;
