@@ -85,7 +85,7 @@ void keyboardHandler(struct InterruptRegisters *regs)
     case 87:
     case 88:
         break;
-        
+
     case 42:
         // shift key
         if (press == 0)

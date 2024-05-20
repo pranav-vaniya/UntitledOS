@@ -2,7 +2,7 @@
 #include "include/stdint.h"
 
 uint16 column = 0, line = 0;
-uint16 *const vga = (uint16 *const)0xB8000;
+uint16 *const vga = (uint16 *const)0xC00B8000;
 const uint16 defaultColor = (COLOR_LIGHT_GREY << 8) | (COLOR_BLACK << 12);
 uint16 currentColor = defaultColor;
 
@@ -66,7 +66,7 @@ void print(const char *s)
             {
                 break;
             }
-            
+
             if (column == 0 && line != 0)
             {
                 line--;
