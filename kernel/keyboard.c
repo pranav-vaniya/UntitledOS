@@ -3,6 +3,7 @@
 #include "include/stdio.h"
 #include "include/idt.h"
 #include "include/keyboard.h"
+#include "include/shell.h"
 
 bool capsOn;
 bool capsLock;
@@ -69,7 +70,6 @@ void keyboardHandler(struct InterruptRegisters *regs)
 
     switch (scanCode)
     {
-    case 1:
     case 29:
     case 56:
     case 59:
@@ -114,11 +114,13 @@ void keyboardHandler(struct InterruptRegisters *regs)
         {
             if (capsOn || capsLock)
             {
-                putc(uppercase[scanCode]);
+                // putc(uppercase[scanCode]);
+                updateShellCommand(uppercase[scanCode]);
             }
             else
             {
-                putc(lowercase[scanCode]);
+                // putc(lowercase[scanCode]);
+                updateShellCommand(lowercase[scanCode]);
             }
         }
     }

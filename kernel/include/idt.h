@@ -1,6 +1,7 @@
 #pragma once
 
 #include "stdint.h"
+#include "util.h"
 
 struct idt_entry_struct
 {

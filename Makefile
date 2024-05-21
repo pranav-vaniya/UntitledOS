@@ -21,12 +21,14 @@ build:
 	$(CC) $(CFLAGS) -c kernel/stdio.c -o build/stdio.o
 	$(CC) $(CFLAGS) -c kernel/memory.c -o build/memory.o
 	$(CC) $(CFLAGS) -c kernel/kmalloc.c -o build/kmalloc.o
+	$(CC) $(CFLAGS) -c kernel/shell.c -o build/shell.o
+	$(CC) $(CFLAGS) -c kernel/string.c -o build/string.o
 
 	nasm -f elf32 i386/boot.s -o build/boot.o
 	nasm -f elf32 i386/gdt.s -o build/gdts.o
 	nasm -f elf32 i386/idt.s -o build/idts.o
 	
-	$(LD) -T linker.ld -o build/UntitledOS/boot/kernel build/boot.o build/kernel.o build/vga.o build/gdt.o build/gdts.o build/util.o build/idt.o build/idts.o build/timer.o build/keyboard.o build/stdio.o build/memory.o build/kmalloc.o
+	$(LD) -T linker.ld -o build/UntitledOS/boot/kernel build/boot.o build/kernel.o build/vga.o build/gdt.o build/gdts.o build/util.o build/idt.o build/idts.o build/timer.o build/keyboard.o build/stdio.o build/memory.o build/kmalloc.o build/shell.o build/string.o
 	grub-mkrescue -o UntitledOS.iso build/UntitledOS
 
 run:
