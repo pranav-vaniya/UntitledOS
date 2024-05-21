@@ -12,7 +12,7 @@ To compile the source code, execute the `make` command in the parent directory:
 ```
 make
 ```
-This will generate an ISO file and start QEMU. You may need to update the compiler path and other settings in the Makefile to suit your environment.
+This will generate an ISO file and start QEMU. You may need to update the compiler path and other settings in the scripts to suit your environment.
 
 ## Acknowledgements
 
