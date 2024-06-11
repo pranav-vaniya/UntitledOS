@@ -26,5 +26,8 @@ void kernelMain(uint32 magic, struct multiboot_info *bootInfo)
     initShell();
 
     for (;;)
-        ;
+    {
+        sleep(1000);
+        printf("%ld\n", time());
+    }
 }
