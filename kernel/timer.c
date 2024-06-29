@@ -40,5 +40,6 @@ void sleep(uint64 milliseconds)
 
     while (ticks < target)
     {
+        asm volatile("hlt");
     }
 }

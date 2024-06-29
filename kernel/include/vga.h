@@ -27,6 +27,6 @@ extern void movecursor();
 void print(const char *s);
 void scrollUp();
 void newLine();
-void Reset();
+void resetVGA();
 void outb(uint16 port, uint8 val);
 void move_cursor(int row, int col);

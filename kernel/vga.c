@@ -20,7 +20,7 @@ void move_cursor(int row, int col) {
     outb(0x3D5, pos & 0xFF);
 }
 
-void ResetVGA()
+void resetVGA()
 {
     line = 0;
     column = 0;
