@@ -55,3 +55,18 @@ void remove_last_char(char *str)
         str[i - 1] = '\0';
     }
 }
+
+bool strcmp(char *str1, char *str2)
+{
+    while (*str1 != '\0' && *str2 != '\0')
+    {
+        if (*str1 != *str2)
+        {
+            return false;
+        }
+        str1++;
+        str2++;
+    }
+
+    return (*str1 == '\0' && *str2 == '\0');
+}

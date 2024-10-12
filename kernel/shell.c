@@ -2,6 +2,11 @@
 #include "include/stdint.h"
 #include "include/string.h"
 #include "include/shell.h"
+#include "include/timer.h"
+#include "include/util.h"
+
+void printTime();
+void poweroff();
 
 char command[128] = "";
 
@@ -52,5 +57,19 @@ void updateShellCommand(char c)
 
 void runCommand()
 {
-    printf("\n%s\n", command);
+    if (strcmp(command, "time") == 1)
+    {
+        printTime();
+    }
+
+    else
+    {
+        printf("\n%s - command not found.\n", command);
+    }
+}
+
+void printTime()
+{
+    uint64 current_time = time();
+    printf("\n%lld\n", current_time);
 }

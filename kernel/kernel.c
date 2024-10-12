@@ -10,6 +10,7 @@
 #include "include/kmalloc.h"
 #include "include/shell.h"
 #include "include/extras.h"
+#include "include/string.h"
 
 void kernelMain(uint32 magic, struct multiboot_info *bootInfo)
 {
@@ -23,7 +24,7 @@ void kernelMain(uint32 magic, struct multiboot_info *bootInfo)
     initKeyboard();
     initMemory(bootInfo->mem_upper * 1024, physicalAllocStart);
     initKmalloc(0x1000);
-    welcome();
+    // welcome();
 
     printf("Untitled OS. Doodle Shell.\n");
     initShell();
