@@ -11,19 +11,21 @@
 #include "include/shell.h"
 #include "include/extras.h"
 #include "include/string.h"
+#include "include/process.h"
 
 void kernelMain(uint32 magic, struct multiboot_info *bootInfo)
 {
     uint32 mod1 = *(uint32 *)(bootInfo->mods_addr + 4);
     uint32 physicalAllocStart = (mod1 + 0xFFF) & ~0xFFF;
 
-    resetVGA();
     initGDT();
     initIDT();
     initTimer();
     initKeyboard();
     initMemory(bootInfo->mem_upper * 1024, physicalAllocStart);
     initKmalloc(0x1000);
+    resetProcesses();
+    resetVGA();
     // welcome();
 
     printf("Untitled OS. Doodle Shell.\n");

@@ -4,9 +4,10 @@
 #include "include/shell.h"
 #include "include/timer.h"
 #include "include/util.h"
+#include "include/process.h"
+#include "include/scheduler.h"
 
 void printTime();
-void poweroff();
 
 char command[128] = "";
 
@@ -60,6 +61,16 @@ void runCommand()
     if (strcmp(command, "time") == 1)
     {
         printTime();
+    }
+
+    else if (strcmp(command, "reset") == 1)
+    {
+        resetProcesses();
+    }
+
+    else if (strcmp(command, "fcfs") == 1)
+    {
+        fcfs();
     }
 
     else
